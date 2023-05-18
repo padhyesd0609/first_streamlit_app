@@ -44,3 +44,6 @@ streamlit.dataframe(my_data_rows)
 
 fruit_choice_Add = streamlit.text_input('What fruit you would like to add?','Kiwi')
 streamlit.write('Thanks for adding', fruit_choice_Add)
+
+# Insert data with help of snowflake connector
+my_cur.execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('from streamlit')")
